@@ -1,0 +1,72 @@
+df['exterior_color'].value_counts(normalize=True) 
+
+
+
+sns.countplot(data=df, x='brand')
+plt.xticks(rotation=90)
+plt.show()
+
+
+
+
+
+df[df['model'].isna()] 
+
+
+model_na_index = df[df['model'].isna()].index
+df.drop(model_na_index, axis=0, inplace=True)
+df.shape
+
+
+
+
+df['model'].value_counts()
+
+df['model'].unique().shape
+
+df['transmission'].value_counts()
+df['automatic_transmission'].value_counts()
+
+df['drivetrain'].value_counts()
+df['automatic_emergency_braking'].value_counts()
+
+
+sns.countplot(data=df, x='brand')
+plt.xticks(rotation=90)
+plt.show()
+
+
+
+0   brand                        4777 non-null   object 
+ 1   model                        4777 non-null   object 
+ 2   year                         4777 non-null   float64
+ 3   mileage                      4777 non-null   float64
+ 4   engine                       4771 non-null   object  
+ 6   transmission                 4760 non-null   object 
+ 7   automatic_transmission       4777 non-null   float64
+ 8   fuel_type                    4777 non-null   object 
+ 9   drivetrain                   4777 non-null   object  
+ 12  damaged                      4723 non-null   float64
+ 13  first_owner                  4689 non-null   float64
+ 14  personal_using               4721 non-null   float64
+ 15  turbo                        4777 non-null   float64
+ 16  alloy_wheels                 4777 non-null   float64
+ 17  adaptive_cruise_control      4777 non-null   float64
+ 18  navigation_system            4777 non-null   float64
+ 19  power_liftgate               4777 non-null   float64
+ 20  backup_camera                4777 non-null   float64
+ 21  keyless_start                4777 non-null   float64
+ 22  remote_start                 4777 non-null   float64
+ 23  sunroof/moonroof             4777 non-null   float64
+ 24  automatic_emergency_braking  4777 non-null   float64
+ 25  stability_control            4777 non-null   float64
+ 26  leather_seats                4777 non-null   float64
+ 27  memory_seat                  4777 non-null   float64
+ 28  third_row_seating            4777 non-null   float64
+ 29  apple_car_play/android_auto  4777 non-null   float64
+ 30  bluetooth                    4777 non-null   float64
+ 31  usb_port                     4777 non-null   float64
+ 32  heated_seats                 4777 non-null   float64
+ 33  interior_color               4457 non-null   object 
+ 34  exterior_color               4717 non-null   object  
+
