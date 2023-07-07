@@ -70,3 +70,39 @@ plt.show()
  33  interior_color               4457 non-null   object 
  34  exterior_color               4717 non-null   object  
 
+
+
+RMSE of training dataset using LinearRegression = 30971.36
+RMSE of validation dataset using LinearRegression = 19440.30
+
+
+RMSE of training dataset using LinearRegression with PolynomialFeatures = 26319.90
+RMSE of validation dataset using LinearRegression with PolynomialFeatures = 18266.48
+
+
+RMSE of Training Dataset using SGDRegression is: 197950075512561.750
+RMSE of Validation Dataset using SGDRegression is: 189258012635286.406
+
+
+
+
+
+duplicates
+
+encoding many values
+
+df.hist(bins=40, figsize=(20,20))
+plt.show()
+
+year in outliers
+df[col].loc[outliers_indices] = col_median		>>  		df[col].loc[outliers_indices, col] = col_median
+
+hist before outliers and after outliers
+
+
+split nominal and ordinal
+
+
+convert year to string and make it nominal nominal encoding
+
+handle target - np.log
