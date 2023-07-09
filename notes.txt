@@ -106,3 +106,8 @@ split nominal and ordinal
 convert year to string and make it nominal nominal encoding
 
 handle target - np.log
+
+
+from category_encoders import BinarEncoder
+encoder = BinaryEncoder(drop_invariant=True)
+cat_df =encoder.fit_transform(cat_df)
